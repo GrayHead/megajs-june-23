@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+
+    let xxx = {
+        id: 1,
+        imya: 'kokos',
+        prizviche: 'abrikosov',
+        info: function (msg = 'hello') {
+            console.log(`${msg} my name is ${this.imya} and surname is ${this.prizviche}`)
+            console.log(name);
+        },
+        wife: {
+            xxx: function () {
+                this
+            },
+        }
+    }
+
+    xxx.info('vitayu');
+
+    function f() {
+        console.log(this);
+    }
+
+    f();
+
+
+    // shft ctr /
+    /*window.*/
+    // confirm();
+    /*window.*/
+    // prompt();
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .product img {
+            width: 300px;
+            border: 2px solid silver;
+            margin-bottom: 25px;
+        }
+
+        .product {
+
+            border: 2px solid gray;
+            width: 400px;
+            margin-bottom: 5px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+<!--<div class="product">-->
+<!--    <h3 class="title"></h3>-->
+<!--    <img src="ref" alt="title">-->
+<!--</div>-->
+
+
+<h1>shop</h1>
+
+<div class="products">
+
+</div>
+
+<script>
+
+
+    let products = [
+        {
+            title: 'milk',
+            price: 22,
+            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+        },
+        {
+            title: 'juice',
+            price: 27,
+            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+        },
+        {
+            title: 'tomato',
+            price: 47,
+            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+        },
+        {
+            title: 'tea',
+            price: 15,
+            image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+        },  {
+            title: 'milk',
+            price: 22,
+            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+        },
+        {
+            title: 'juice',
+            price: 27,
+            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+        },
+        {
+            title: 'tomato',
+            price: 47,
+            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+        },
+        {
+            title: 'tea',
+            price: 15,
+            image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+        },
+    ];
+
+    for (const product of products) {
+        // стоврили контейнер для продукта
+        let productContainer = document.createElement('div');
+        productContainer.classList.add('product');
+        //h3
+        let h3 = document.createElement('h3');
+        h3.classList.add('title')
+        h3.innerText = product.title + ' ' + product.price;
+        productContainer.appendChild(h3);
+        // img
+        let img = document.createElement('img');
+        img.src = product.image;
+        img.alt = product.title;
+        productContainer.appendChild(img);
+        // знайшли блок в який потрібно додавати контейнер з інфо про продукт
+        let productsDiv = document.getElementsByClassName('products')[0];
+        productsDiv.appendChild(productContainer);
+    }
+
+
+</script>
+</body>
+</html>

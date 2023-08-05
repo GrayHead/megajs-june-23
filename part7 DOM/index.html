@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="target">class = target 1</div>
+<div class="target">class = target 2</div>
+<div>class = target 3</div>
+
+<ul id="menu-1" class="menu">
+    <li>data ul 1</li>
+    <li>data ul 2</li>
+    <li>data ul 3</li>
+    <li>data ul 4</li>
+    <li>data ul 5</li>
+</ul>
+
+<ol id="menu-2" class="menu">
+    <li>data ul 1</li>
+    <li>data ul 2</li>
+    <li>data ul 3</li>
+    <li>data ul 4</li>
+    <li>data ul 5</li>
+</ol>
+
+<script>
+    // let listTarget = document.getElementsByClassName('target'); // []
+    // let div1 = listTarget[0];
+    // div1.innerHTML = '<strong>okten is cool</strong>';
+    // div1.classList.add('newclass');
+    // div1.setAttribute('data-set', 'foobar');
+    // div1.setAttribute('id', 'div1');
+    //
+    // div1.classList.remove('newclass');
+    // div1.removeAttribute('data-set');
+    //
+    //
+    // console.log(div1);
+    // console.log(listTarget[1]);
+    // console.log(listTarget[2]);
+
+    // let elementsByTagName = document.getElementsByTagName('div');
+    // console.log(elementsByTagName);
+
+
+    // let lis = document.getElementsByTagName('li');
+    // console.log(lis);
+    // for (const li of lis) {
+    //     li.innerText = 'new txt';
+    // }
+
+    let ol = document.getElementById('menu-2'); // ol
+
+    console.log(ol);
+    // ol.getElementsByTagName('li')
+    let allLi = ol.children;
+    console.log(allLi);
+
+    // let liWithID = [];
+    // let liWithClass = [];
+    // for (const li of allLi) {
+    //     if (li.getAttribute('id')) {
+    //         liWithID.push(li);
+    //     }
+    //     if (li.classList.contains('????')) {
+    //         liWithClass.push(li);
+    //     }
+    // }
+
+
+    // document.querySelectorAll('body ol#menu2>li[class="*"]')
+
+
+
+
+
+</script>
+</body>
+</html>
